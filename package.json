@@ -53,6 +53,7 @@
     "resolve-url-loader": "3.1.0",
     "sass-loader": "7.2.0",
     "semver": "6.3.0",
+    "sinon": "^7.4.2",
     "style-loader": "1.0.0",
     "terser-webpack-plugin": "1.4.1",
     "ts-pnp": "1.1.2",
@@ -96,7 +97,7 @@
       "react-app-polyfill/jsdom"
     ],
     "setupFilesAfterEnv": [
-        "<rootDir>/tests/setupTests.js"
+      "<rootDir>/tests/setupTests.js"
     ],
     "testMatch": [
       "<rootDir>/tests/**/*.{spec,test}.{js,jsx,ts,tsx}"
