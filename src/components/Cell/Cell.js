@@ -18,11 +18,36 @@ export class Cell extends React.Component {
         }
     }
 
+    renderX() {
+        return (
+            <svg className="xs" aria-label="X" role="img" viewBox="0 0 128 128">
+                <path d="M16,16L112,112"></path>
+                <path d="M112,16L16,112"></path>
+            </svg>
+        );
+    }
+
+    renderO() {
+        return (
+            <svg className="os" aria-label="O" role="img" viewBox="0 0 128 128">
+                <path d="M64,16A48,48 0 1,0 64,112A48,48 0 1,0 64,16"></path>
+            </svg>
+        );
+    }
+
     render() {
         const { state } = this.props;
+        let content = null;
+
+        if (state === 'X') {
+            content = this.renderX();
+        } else if (state === 'O') {
+            content = this.renderO();
+        }
+
         return (
             <div className="cell" onClick={this.onClick}>
-                {state}
+                {content}
             </div>
         );
     }
