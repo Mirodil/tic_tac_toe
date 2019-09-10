@@ -2,7 +2,6 @@ import React from 'react';
 import sinon from 'sinon';
 import Footer from '../../../src/components/Footer';
 import { shallow, mount } from 'enzyme';
-import { italic } from 'ansi-colors';
 
 it('expect to render without issue', () => {
     const footer = mount(<Footer onClick={() => { }} />);
