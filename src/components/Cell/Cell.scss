@@ -1,0 +1,17 @@
+.cell {
+    flex: 1;
+    position: relative;
+}
+
+.cell::after{
+    content: "";
+    height: 100%;
+    border-left: 4px solid #0da192;
+    position: absolute;
+    right: -2px;
+    z-index: 99;
+}
+
+.cell:last-child::after{
+    content: none;
+}

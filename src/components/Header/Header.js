@@ -1,8 +1,15 @@
 import React from 'react';
+import './Header.scss';
 
 export class Header extends React.Component {
     render() {
-        return null;
+        return (
+            <div className="header">
+                <span className="state">
+                    Start Game
+                </span>
+            </div>
+        )
     }
 };
 

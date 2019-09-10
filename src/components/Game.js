@@ -1,5 +1,5 @@
 import React from 'react';
-import './Game.css';
+import './Game.scss';
 import Header from './Header';
 import Footer from './Footer';
 import Board from './Board';
@@ -20,13 +20,13 @@ export class Game extends React.Component {
 
     render() {
         return (
-            <div className="app">
+            <div className="game">
                 <Header />
                 <Board cells={this.state.cells} />
                 <Footer restart={this.restart} />
             </div>
         );
     }
-}
+};
 
 export default Game;
