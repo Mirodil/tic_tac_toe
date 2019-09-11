@@ -36,4 +36,13 @@
     .row:last-child::after{
         content: none;
     }
+
+    .winner{
+        text-align: center;
+        color: #edffb9;
+        width: 100%;
+        position: absolute;
+        font-size: 48px;
+        padding-top: 40%;
+    }
 }

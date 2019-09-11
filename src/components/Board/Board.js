@@ -6,16 +6,28 @@ import './Board.scss';
 export class Board extends React.Component {
 
     static propTypes = {
-        cells: PropTypes.array
+        cells: PropTypes.array,
+        onCellClick: PropTypes.func,
+        isGameOver: PropTypes.bool,
+        winner: PropTypes.string
     }
 
     renderCells(cells, addition) {
-        return cells.map((s, i) => <Cell key={i} state={s} index={i + addition} />)
+        return cells
+            .map((s, i) => <Cell key={i} state={s} index={i + addition} onClick={this.props.onCellClick} />)
     }
 
     render() {
-        const { cells } = this.props;
-
+        const { cells, isGameOver, winner } = this.props;
+        if (isGameOver) {
+            return (
+                <div className="board">
+                    <div className="winner">
+                        {winner} Winner!
+                    </div>
+                </div>
+            );
+        }
         return (
             <div className="board">
                 <div className="grid">
